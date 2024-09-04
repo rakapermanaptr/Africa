@@ -28,6 +28,9 @@ struct HeadingView: View {
 }
 
 // MARK: PREVIEW
-#Preview(traits: .sizeThatFitsLayout) {
-    HeadingView(headingImage: "photo.on.rectangle.angled", headingTitle: "Wilderness in Pictures")
+struct HeadingView_Preview: PreviewProvider {
+    static var previews: some View {
+        HeadingView(headingImage: "photo.on.rectangle.angled", headingTitle: "Wilderness in Pictures")
+            .previewLayout(.sizeThatFits)
+    }
 }

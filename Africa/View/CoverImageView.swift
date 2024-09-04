@@ -25,6 +25,10 @@ struct CoverImageView: View {
 }
 
 // MARK: - PREVIEW
-#Preview(traits: .fixedLayout(width: 400, height: 300)) {
-    CoverImageView()
+struct CoverImageView_Preview: PreviewProvider {
+    static var previews: some View {
+        CoverImageView()
+            .previewLayout(.fixed(width: 400, height: 400))
+    }
 }
+

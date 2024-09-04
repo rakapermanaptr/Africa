@@ -21,7 +21,7 @@ struct AnimalListItemView: View {
                 .clipShape(
                     RoundedRectangle(cornerRadius: 12)
                 )
-             
+            
             VStack(alignment: .leading, spacing: 8) {
                 Text(animal.name)
                     .font(.title2)
@@ -38,7 +38,10 @@ struct AnimalListItemView: View {
     }
 }
 
-#Preview(traits: .sizeThatFitsLayout) {
-    AnimalListItemView(animal: Animal(id: "1", name: "Lion", headline: "Lion headline", description: "lion description", link: "https://google.com", image: "lion", gallery: ["asd", "adf"], fact: ["sdf", "ihjh"]))
-        .padding()
+struct AnimalListItemView_Preview: PreviewProvider {
+    static var previews: some View {
+        AnimalListItemView(animal: Animal(id: "1", name: "Lion", headline: "Lion headline", description: "lion description", link: "https://google.com", image: "lion", gallery: ["asd", "adf"], fact: ["sdf", "ihjh"]))
+            .previewLayout(.sizeThatFits)
+            .padding()
+    }
 }
